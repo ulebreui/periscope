@@ -24,7 +24,7 @@ class SharkData():
         self.y   = self.read_var(filename,'y',NX*NY)
         self.xx  = np.linspace(-box_x/2.,box_x/2.,NX)
         self.yy  = np.linspace(-box_y/2.,box_y/2.,NY)
-        self.v   = self.read_var(filename,'v',NX*NY)
+        self.v1   = self.read_var(filename,'v',NX*NY)
         self.vy1  = self.read_var(filename,'vy',NX*NY)
         self.P1   = self.read_var(filename,'P',NX*NY)
         self.rho1 = self.read_var(filename,'rho',NX*NY)
