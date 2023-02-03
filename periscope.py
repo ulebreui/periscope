@@ -29,10 +29,10 @@ class SharkData():
         self.P1   = self.read_var(filename,'P',NX*NY)
         self.rho1 = self.read_var(filename,'rho',NX*NY)
         
-        self.rho = np.reshape(self.rho1,(NY,NX),order = "C").T
+        self.rho    = np.reshape(self.rho1,(NY,NX),order = "C").T
         self.vel_x  = np.reshape(self.v1,(NY,NX),order = "C").T
         self.vel_y  = np.reshape(self.vy1,(NY,NX),order = "C").T
-        self.P   = np.reshape(self.P1,(NY,NX),order = "C").T
+        self.P      = np.reshape(self.P1,(NY,NX),order = "C").T
         
         if(NDUST>0):
             self.rhod0  = self.read_var(filename,'rhod',NX*NY*NDUST)
