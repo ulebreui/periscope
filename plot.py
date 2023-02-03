@@ -7,7 +7,7 @@ from matplotlib.colors import ListedColormap
 from matplotlib.ticker import MaxNLocator
 
 def plot_slice(sharkdata,var,scalar_args={"cmap":'viridis','levels':200},cbar_args=None):
-	plt.contourf(sharkdata.xx,sharkdata.yy,getattr(sharkdata,var))#,scalar_args=scalar_args)
+	plt.contourf(sharkdata.xx,sharkdata.yy,getattr(sharkdata,var),**scalar_args)
 	#plt.colorbar(cbar_args)
 	plt.xlabel("x")
 	plt.ylabel("y")
