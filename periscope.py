@@ -40,7 +40,7 @@ class SharkData():
             self.vdy0   = self.read_var(filename,'vdy',NX*NY*NDUST)
             self.rhod = np.reshape(self.rhod0,(NDUST,NY,NX),order = "C").T
             self.vxd  = np.reshape(self.vd0,(NDUST,NY,NX),order = "C").T
-            self.vyd  = np.reshape(self.vyd0,(NDUST,NY,NX),order = "C").T
+            self.vyd  = np.reshape(self.vdy0,(NDUST,NY,NX),order = "C").T
             for idust in range(NDUST):
                 setattr("rhod_"+str(idust+1),self.rhod[:,:,idust])
                 setattr("vel_d_x_"+str(idust+1) ,self.vxd[:,:,idust])
