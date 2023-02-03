@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import glob
-import dune
 from matplotlib.colors import BoundaryNorm
 from matplotlib.ticker import MaxNLocator
 from matplotlib.colors import ListedColormap
