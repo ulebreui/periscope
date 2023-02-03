@@ -42,12 +42,12 @@ class SharkData():
             self.vxd  = np.reshape(self.vd0,(NDUST,NY,NX),order = "C").T
             self.vyd  = np.reshape(self.vdy0,(NDUST,NY,NX),order = "C").T
             for idust in range(NDUST):
-                setattr("rhod_"+str(idust+1),self.rhod[:,:,idust])
-                setattr("vel_d_x_"+str(idust+1) ,self.vxd[:,:,idust])
-                setattr("vel_d_y_"+str(idust+1) ,self.vxd[:,:,idust])
-                setattr("dust-to-gas_"+str(idust+1),self.rhod[:,:,idust]/self.rho)
-            setattr("dust-to-gas",np.sum(self.rhod,axis=2)/self.rho)
-            setattr("rhod",np.sum(self.rhod,axis=2))
+                setattr(self,"rhod_"+str(idust+1),self.rhod[:,:,idust])
+                setattr(self,"vel_d_x_"+str(idust+1) ,self.vxd[:,:,idust])
+                setattr(self,"vel_d_y_"+str(idust+1) ,self.vxd[:,:,idust])
+                setattr(self,"dust-to-gas_"+str(idust+1),self.rhod[:,:,idust]/self.rho)
+            setattr(self,"dust-to-gas",np.sum(self.rhod,axis=2)/self.rho)
+            setattr(self,"rhod",np.sum(self.rhod,axis=2))
         
         return
 
