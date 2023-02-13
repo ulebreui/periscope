@@ -13,7 +13,7 @@ def plot_slice(sharkdata,var,scalar_args={"cmap":'viridis'},cbar_args=None):
 		fig.colorbar(**cbar_args)
 	plt.xlabel("x")
 	plt.ylabel("y")
-	plt.legend()
+	#plt.legend()
 	plt.show()
 
   
