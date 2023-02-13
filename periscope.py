@@ -44,7 +44,7 @@ class SharkData():
             for idust in range(NDUST):
                 setattr(self,"rhod_"+str(idust+1),self.rhod[:,:,idust])
                 setattr(self,"vel_d_x_"+str(idust+1) ,self.vxd[:,:,idust])
-                setattr(self,"vel_d_y_"+str(idust+1) ,self.vxd[:,:,idust])
+                setattr(self,"vel_d_y_"+str(idust+1) ,self.vyd[:,:,idust])
                 setattr(self,"dust-to-gas_"+str(idust+1),self.rhod[:,:,idust]/self.rho)
             setattr(self,"dust-to-gas",np.sum(self.rhod,axis=2)/self.rho)
             setattr(self,"rhod",np.sum(self.rhod,axis=2))
