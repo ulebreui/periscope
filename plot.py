@@ -7,9 +7,10 @@ from matplotlib.colors import ListedColormap
 from matplotlib.ticker import MaxNLocator
 
 def plot_slice(sharkdata,var,scalar_args={"cmap":'viridis'},cbar_args=None):
-	im=plt.pcolormesh(sharkdata.xx,sharkdata.yy,getattr(sharkdata,var),**scalar_args)
+	fig=plt.figure()
+	plt.pcolormesh(sharkdata.xx,sharkdata.yy,getattr(sharkdata,var),**scalar_args)
 	if(cbar_args is not None):
-		cb=plt.colorbar(im,**cbar_args)
+		fig.colorbar(**cbar_args)
 	plt.xlabel("x")
 	plt.ylabel("y")
 	plt.legend()
